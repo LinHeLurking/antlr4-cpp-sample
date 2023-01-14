@@ -107,6 +107,7 @@ else()
       antlr4_runtime
       PREFIX antlr4_runtime
       GIT_REPOSITORY ${ANTLR4_GIT_REPOSITORY}
+      GIT_SHALLOW TRUE
       GIT_TAG ${ANTLR4_TAG}
       DOWNLOAD_DIR ${CMAKE_CURRENT_BINARY_DIR}
       BUILD_COMMAND ""
