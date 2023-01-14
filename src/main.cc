@@ -8,8 +8,8 @@
 #include <iostream>
 #include <memory>
 
-#include "src/parser/ArrayInitLexer.h"
-#include "src/parser/ArrayInitParser.h"
+#include "parser/ArrayInitLexer.h"
+#include "parser/ArrayInitParser.h"
 
 class Tester {
  public:
