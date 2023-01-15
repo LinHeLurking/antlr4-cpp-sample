@@ -3,7 +3,7 @@ project(antlr_cxx_demo CXX)
 # minimum required CMAKE version
 CMAKE_MINIMUM_REQUIRED(VERSION 3.7 FATAL_ERROR)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../cmake)
 
 # compiler must be 17
 set(CMAKE_CXX_STANDARD 17)
@@ -36,11 +36,11 @@ endif()
 find_package(ANTLR REQUIRED)
 
 # add generated grammar to demo binary target
-# file(GLOB_RECURSE PARSER_SRC
-#     "src/parser/*.h"
-#     "src/parser/*.hpp"
-#     "src/parser/*.cpp"
-#     "src/parser/*.cc"
-#     )
-# add_executable(demo src/main.cc ${PARSER_SRC})
-# target_link_libraries(demo antlr4_static)
+file(GLOB_RECURSE PARSER_SRC
+    "src/parser/*.h"
+    "src/parser/*.hpp"
+    "src/parser/*.cpp"
+    "src/parser/*.cc"
+    )
+add_executable(demo src/main.cc ${PARSER_SRC})
+target_link_libraries(demo antlr4_static)
