@@ -26,9 +26,6 @@ include(ExternalAntlr4Cpp)
 # add antrl4cpp artifacts to project environment
 include_directories(${ANTLR4_INCLUDE_DIRS})
 
-# Add PIC for antlr static library.
-set_property(TARGET antlr4_static PROPERTY POSITION_INDEPENDENT_CODE ON)
-
 # set variable pointing to the antlr tool that supports C++
 # this is not required if the jar file can be found under PATH environment
 # set(ANTLR_EXECUTABLE antlr4)
