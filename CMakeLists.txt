@@ -39,9 +39,11 @@ endif()
 find_package(ANTLR REQUIRED)
 
 # add generated grammar to demo binary target
-file(GLOB PARSER_SRC
+file(GLOB_RECURSE PARSER_SRC
     "src/parser/*.h"
+    "src/parser/*.hpp"
     "src/parser/*.cpp"
+    "src/parser/*.cc"
     )
 add_executable(demo src/main.cc ${PARSER_SRC})
 target_link_libraries(demo antlr4_static)
