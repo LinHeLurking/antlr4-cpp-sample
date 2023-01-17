@@ -1,4 +1,4 @@
-project(antlr_cxx_demo CXX)
+project(antlr_cxx_array_init CXX)
 
 # minimum required CMAKE version
 CMAKE_MINIMUM_REQUIRED(VERSION 3.7 FATAL_ERROR)
@@ -42,5 +42,5 @@ file(GLOB_RECURSE PARSER_SRC
     "src/parser/*.cpp"
     "src/parser/*.cc"
     )
-add_executable(demo src/main.cc ${PARSER_SRC})
-target_link_libraries(demo antlr4_static)
+add_executable(array_init src/main.cc ${PARSER_SRC})
+target_link_libraries(array_init antlr4_static)
